@@ -28,4 +28,3 @@ Vi har under kursens första dag:
 - [ ] Gått igenom kursens innehåll och planering
 - [ ] Installerat VS Code och öppnat upp projektmappen
 - [ ] Skapat vår första HTML-Fil (`index.html`)
-# UX25-Programmering
