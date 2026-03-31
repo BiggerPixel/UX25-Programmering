@@ -25,6 +25,46 @@
 
 Vi har under kursens första dag:
 
-- [ ] Gått igenom kursens innehåll och planering
-- [ ] Installerat VS Code och öppnat upp projektmappen
-- [ ] Skapat vår första HTML-Fil (`index.html`)
+- [x] Gått igenom kursens innehåll och planering
+- [x] Installerat VS Code och öppnat upp projektmappen
+- [x] Skapat vår första HTML-Fil (`index.html`)
+- [x] Skapat vår första CSS-Fil (`/assets/styles/main.css`)
+
+## Grund-element
+
+Dessa element kommer vi _alltid_ ha med i alla våra HTML-filer
+
+- html
+- head - Vi stoppar metadata och länkar till CSS-filer i head-elementet
+  - meta - Metadata om sidan
+  - title - Används för att namnge sidan, syns i browser-fliken och i historiken
+  - link - Används för att tex. länka till en CSS-fil
+- body - I body-elementet stoppar vi sidans innehåll (rubriker, texter, bilder, knappar etc.)
+
+## Grupperande Element
+
+- div - Tänk att detta är lite som en tom "Frame" i Figma, vi kan stoppa innehåll i en `div` och sedan styla den som en enhet/grupp
+
+## Rubriker
+
+- h1 - Vi ska alltid ha med 1st h1-element per HTML-sida, men aldrig fler än 1 (Sidans huvudrubrik)
+- h2
+- h3
+- h4
+- h5
+- h6
+
+## Länk och vanlig text
+
+- a - Används för länkar, antingen mellan våra egna sidor eller till någon annan hemsida på nätet
+- p - Använd för paragrafer med text
+
+## Bilder
+
+- img - Använde för att visa en bild
+
+## Listor
+
+- ol - "Ordered List" dvs. Numrerad lista, toppen för att automatiskt få 1. 2. 3. för listor
+- ul - "Unordered List" eller "Punktlista", samma som OL fast ingen "numrering".
+- li - "List Item" detta används för att skapa varje rad i en lista
