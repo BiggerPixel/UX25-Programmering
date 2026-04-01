@@ -1,70 +1,83 @@
 # Programmering för UX-Produktion 2026
 
-## Såhär kommer du igång:
+# Dag 2 - Samanfattning
 
-### 1. Ladda ner projektmappen:
+## Nya HTML-element som vi kikade på
 
-- Ladda ner mappen vi kommer att utgå ifrån [här](https://github.com/BiggerPixel/UX25-Programmering/archive/refs/heads/main.zip).
-- När mappen laddats ner kan du behöva "unzippa" den.
-- Flytta mappen till ett ställe som du lätt hittar tillbaka till. Vi kommer att använda os av denna mapp under alla lektioner så det underlättar mycket om den är lättilgänglig.
+- `<header>` - Används för att markera inledande innehåll så som tex en meny
+- `<main>` - Används för att markera det huvudsakliga/viktigaste innehåller
+- `<nav>` - Används för att
 
-### 2. Installera VS Code
+### Nämnde dessa men vi har ännu inte anänt dem i koden
 
-- Under kursen kommer vi att använda oss av programmet VS Code för att skriva all kod.
-- Om du inte redan har VS Code sedan tidigare laddar du hem det [här](https://code.visualstudio.com/download). (Inte samma program som Visual Studio om du skulle ha detta sedan tidigare.)
-- Installera programmet och öppna det.
+- `<footer>` - Används för att markera avslutande innehåll/sidfot
+- `<section>` - Används för att markera en tydlig sektion - tex. en sektion av sidan som handlar om nya produkter eller liknande
+- `<article>` - Används för att markera innehåll som kan stå helt för sig själv - tex. en artikel, blogginlägg, produktkort etc.
+- `<aside>` - Används för att markera innehåll som är relaterat men inte centralt/huvud-innehåll - Tex. en fakta-ruta i en artikel
 
-### 3. Öppna projektmappen:
+## CSS Properties vi använde:
 
-- Gå till menyn i VS Code `File > Open Folder...` och välj projektmappen du laddade ner i steg 1.
-- I vänsterkanten bör du nu se mappens alla filer och du kan nu klicka på filen `index.html`
+### Display Block
 
-# Dag 1 - Samanfattning
+Ett element som har `display: block` börjar alltid på en ny rad och tar sedan upp hela bredden oavsett innehållets storlek. Detta "tvingar" efterföljande innehåll på en ny rad oavsett om det efterföljande elementet har display block eller något annat.
 
----
+```css
+display: block;
+```
 
-Vi har under kursens första dag:
+Default inställningen för de flesta grupperande element tex. div, header, footer, main, nav, ul, etc. men även för paragrafer (p), och alla rubriker (h1-h6)
 
-- [x] Gått igenom kursens innehåll och planering
-- [x] Installerat VS Code och öppnat upp projektmappen
-- [x] Skapat vår första HTML-Fil (`index.html`)
-- [x] Skapat vår första CSS-Fil (`/assets/styles/main.css`)
+### Display Inline
 
-## Grund-element
+Ett element som har `display: inline` tar bara upp så mycket bredd som dess innehåll kräver, tänk tex. en länk (a) som ligger mitt i en paragraf-text. Till skillnad från display block så börjar den inte med en ny rad automatiskt och tar bara upp så mycket utrymme på bredden som dess innehåll kräver.
 
-Dessa element kommer vi _alltid_ ha med i alla våra HTML-filer
+```css
+display: inline;
+```
 
-- html
-- head - Vi stoppar metadata och länkar till CSS-filer i head-elementet
-  - meta - Metadata om sidan
-  - title - Används för att namnge sidan, syns i browser-fliken och i historiken
-  - link - Används för att tex. länka till en CSS-fil
-- body - I body-elementet stoppar vi sidans innehåll (rubriker, texter, bilder, knappar etc.)
+Default inställningen för text-element som ofta används innuti/inline med löpande text tex. länkar (a) men även flera andra element som vi inte hunnit kika på ännu.
 
-## Grupperande Element
+### Display Flex
 
-- div - Tänk att detta är lite som en tom "Frame" i Figma, vi kan stoppa innehåll i en `div` och sedan styla den som en enhet/grupp
+Ett element som har `display: flex` motsvarar att vi slagit på `Auto Layout` i Figma. Med hjälp av flexbox kan vi positionera elementets "children" på precis samma sätt som vi är vana vid i Figma.
 
-## Rubriker
+```css
+display: flex;
+```
 
-- h1 - Vi ska alltid ha med 1st h1-element per HTML-sida, men aldrig fler än 1 (Sidans huvudrubrik)
-- h2
-- h3
-- h4
-- h5
-- h6
+> OBS! Verktyget heter Flexbox men vi skriver alltid bara "flex"!
 
-## Länk och vanlig text
+#### Exempel på en lista med länkar som vi stylat med Flexbox
 
-- a - Används för länkar, antingen mellan våra egna sidor eller till någon annan hemsida på nätet
-- p - Använd för paragrafer med text
+```html
+<ul>
+  <li><a href="/">Länk 1</a></li>
+  <li><a href="/">Länk 2</a></li>
+  <li><a href="/">Länk 3</a></li>
+  <li><a href="/">Länk 4</a></li>
+  <li><a href="/">Länk 5</a></li>
+</ul>
+```
 
-## Bilder
+```css
+ul {
+  display: flex; /* Här väljer vi att använda "flexbox" */
+  gap: 16px; /* Här ställer vi in avståndet mellan varje länk (16px) */
+  justify-content: start; /* Här säger vi att alla länkar ska positioneras längst till vänster/början av listan */
+  align-items: center; /* Här säger vi att alla länkar ska centreras vertikalt */
+}
+```
 
-- img - Använde för att visa en bild
+### Hover-states
 
-## Listor
+```css
+a {
+  /* här skriver vi vår default-styling för en länk */
+}
 
-- ol - "Ordered List" dvs. Numrerad lista, toppen för att automatiskt få 1. 2. 3. för listor
-- ul - "Unordered List" eller "Punktlista", samma som OL fast ingen "numrering".
-- li - "List Item" detta används för att skapa varje rad i en lista
+/* Genom att lägga till ":hover" så kommer denna styling enbart att appliceras när vi hovrar över elementet */
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+```

@@ -1,0 +1,31 @@
+header {
+  /* Bordern använder vi enbart för att lättare se de annars "osynliga" kanterna på headern - Samma nedanför */
+  border: solid 1px blue;
+}
+
+ul {
+  border: solid 1px red;
+  list-style: none; /* Denna inställning döljer "prickarna" i en punktlista */
+  padding: 24px; /* Här ställer vi in 24px padding runt om hela ul:en */
+  margin: 0; /* Vi tar bort den "default-styling" som finns på ul-element */
+}
+
+li {
+  /* display inline gör så att ett element bara tar upp så mycket bredd som dess innehåll kräver - till skillnad från display block som alltid fyller upp hela bredden */
+  display: inline;
+  border: solid 1px green;
+}
+
+a {
+  text-decoration: none; /* Tar bort understrykningen av länkar */
+  color: black;
+}
+
+/* Här testade vi att göra våra första egna "CSS-klasser" - de börjar alltid med en punkt och läggs till på de HTML-element vi vill i class-attributet t.ex <a class="menu-link" href="..."> */
+.menu-link {
+  color: red;
+}
+
+.menu-link-lg {
+  font-size: 45px;
+}

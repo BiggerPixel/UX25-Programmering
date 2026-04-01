@@ -1,0 +1,47 @@
+/* Denna fil gjorde vi under eftermiddagen och "gjorde om" stylingen från tidigare fast denna gång med hjälp av Flexbox! (samma som Autolayout i Figma) */
+
+/* Styling för "hela sidan" dvs allt som finns i vårt <body> element */
+body {
+  background-color: cornflowerblue;
+  font-family: sans-serif; /* Sans-serif typsnitt - inget specikt typsnitt utan bara datorns standard-sans-serif-typsnitt */
+  margin: 0; /* Tar bort ev. default margin runt om hela sidan */
+  padding: 0; /* Tar bort ev. default padding runt om hela sidan */
+}
+
+ul {
+  /* Här tar vi bort ul-listans "default styling" med margin och list-style (tar bort punkterna från punktlistan) */
+  margin: 0;
+  list-style: none;
+
+  /* Vi sätter en bakgrundsfärg och padding på 24px runt om hela listan */
+  background-color: white;
+  padding: 24px;
+
+  /* Här är de "Magiska" inställningarna som motsvarar Figma's Auto Layout */
+  display: flex; /* Verktyget heter Flexbox men vi skriver bara "flex" här - Detta är som att "Slå på" Auto Layout */
+  gap: 16px; /* Samma som i Figma - Gap är avståndet mellan varje element i vår flexbox */
+
+  /* Dessa inställningar använder vi för att positionera alla element i listan i sidled - ni skriver bara 1 av dessa rader, men jag listar de vanligaste alternativen här nedanför */
+  justify-content: start; /* Default-valet - Allt ligger längst till vänster */
+  justify-content: center; /* Allt innehåll läggs i mitten av er flexbox (horisontell center)*/
+  justify-content: end; /* Allt innehåll flyttar till högerkanten av vår flexbox*/
+  justify-content: space-between; /* Denna motsvarar Figma's "Gap: Auto" och fördelar alla element i listan med överblivet utrymme mellan dem */
+
+  /* Denna inställning kikade vi aldrig på men den används för vertikal alignment */
+  align-items: center; /* Centrerar alla element i listan vertikalt - perfekt för att få logga och länkar att vara centrerade! */
+}
+
+/* Här kommer ett exempel på hur vi får till hover-states för länkar */
+a {
+  /* Först definierar vi hur länkarna ska se ut n'r vi INTE hovrar över dem */
+  color: darkslategray;
+  text-decoration: none;
+}
+
+/* Notera att vi här skriver samma "selector" som ovan men att vi lägger till ":hover" (OBS! utan mellanslag) */
+/* Detta gör att denna styling enbart appliceras på länkarna medan vi hoverar över dem */
+a:hover {
+  /* Och här är hur vi vill att det ska se ut när vi hovrar över en länk */
+  color: black;
+  text-decoration: underline;
+}
