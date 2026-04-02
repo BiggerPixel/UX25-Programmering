@@ -3,33 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lektion 2</title>
-    <!-- Här länkar vi till CSS-fil nummer 2 som vi skapade under eftermiddagen där vi testade "flexbox" (samma som Auto Layout i Figma) -->
-    <link rel="stylesheet" href="/assets/styles/auto-layout.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/styles/main.css" />
   </head>
   <body>
-    <!-- Här är vår "huvudmeny" - det markerar vi med <header> -->
-    <header>
-      <!-- Vi indikerar att denna del av hemsidan innehåller viktiga navigations-länkar med <nav> -->
+    <header class="main-menu">
       <nav>
-        <!-- Eftersom att det är en lista med länkar vi vill visa så skapar vi en <ul> "Unordered List" eller "punktlista" -->
+        <a href="/">Logga</a>
+
         <ul>
-          <!-- Varje länk ska ligga i en "List Item" <li> -->
-          <li>
-            <!-- Här är själva länken vi vill visa upp - i detta fall till "project.html"-filen -->
-            <a href="/project.html">Projekt</a>
-          </li>
-          <li>
-            <a href="/about.html">Om oss</a>
-          </li>
-          <li>
-            <a href="/contact.html">Kontakt</a>
-          </li>
+          <li><a href="/">Aktuellt</a></li>
+          <li><a href="/">Om Försvarsmakten</a></li>
+          <li><a href="/">Värnplikt och karriär</a></li>
+          <li><a href="/">Regler och tillstånd</a></li>
         </ul>
       </nav>
+
+      <div>
+        <ul>
+          <li><a href="/en">In English</a></li>
+          <li><a href="/search">Sök Innehåll</a></li>
+        </ul>
+      </div>
     </header>
 
-    <!-- Här har vi valt att lägga sidans huvud-rubrik under "menyn" -->
-    <h1>Lektion 2</h1>
+    <a href="/about">Om Oss</a>
   </body>
 </html>
