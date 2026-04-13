@@ -1,7 +1,5 @@
 # Programmering för UX-Produktion 2026
 
-## Lektion 5
+## Lektion 6
 
-Under lektion 5 gick vi igenom flera exempel på hur vi använder CSS Grid och kikade även på hur vi använder grid i Figma
-
-Mer sammanfattning kommer strax...
+Under lektion 6 kommer vi gå igenom ett sista exempel på CSS Grid med twilwind och sedan kika på Formulär i HTML
