@@ -1,3 +1,18 @@
 body {
   background-color: #302e3e;
 }
+
+.my-grid {
+  height: 100svh;
+  display: grid;
+  padding: 48px;
+  gap: 24px;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: 1fr 1fr 1fr 1.3fr;
+  grid-template-rows: 1fr 0.8fr 0.2fr 1fr;
+
+  div {
+    background-color: hotpink;
+    border-radius: 32px;
+  }
+}

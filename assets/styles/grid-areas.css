@@ -1,0 +1,45 @@
+body {
+  background-color: #302e3e;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "sidebar"
+    "footer";
+  grid-template-rows: 48px 1fr 200px 150px;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    height: 100svh;
+    grid-template-areas:
+      "header header"
+      "sidebar content"
+      "footer footer";
+    grid-template-rows: 48px 1fr 150px;
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+#header {
+  background-color: red;
+  grid-area: header;
+}
+
+#sidebar {
+  background-color: green;
+  grid-area: sidebar;
+}
+
+#content {
+  background-color: pink;
+  grid-area: content;
+  overflow: auto;
+  padding: 42px;
+}
+
+#footer {
+  background-color: coral;
+  grid-area: footer;
+}
